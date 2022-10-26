@@ -30,7 +30,7 @@ export const Menu = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 height: '100%',
-                maxWidth: '95px',
+                minWidth: '100px',
                 width: '100%',
                 gap: 7,
             }}>
@@ -50,7 +50,7 @@ export const Menu = () => {
                         display: 'flex',
                         flexDirection: "column",
                         // height: '192',
-                        gap:4,
+                        gap: 4,
                     }}>
                         <img width='24' height='24' src={menu}/>
                         <img width='24' height='24' src={searchIcon}/>

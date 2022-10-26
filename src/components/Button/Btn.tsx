@@ -3,7 +3,7 @@ import {Box, Button as MuiButton, ButtonProps, Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
 
 interface Properties extends ButtonProps {
-    readonly btnBgColor?: 'purple' | 'transparent' | 'borders' | 'roundWhite'| 'lightPurple'| 'black';
+    readonly btnBgColor?: 'purple' | 'transparent' | 'borders' | 'roundWhite'| 'lightPurple2'| 'lightPurple'| 'black';
     readonly disabled?: boolean;
     readonly btnImgIcon?: string | any;
     readonly btnIconDisplay?: string | any;
@@ -20,6 +20,7 @@ const Button = styled(MuiButton)((props: Properties) => {
                 background: '#000000',
                 color: 'white',
                 padding: '15px ',
+                minWidth: '112px',
                 width: '143.96px',
                 '&:hover': {
                     background: '#9d71fa',
@@ -36,9 +37,31 @@ const Button = styled(MuiButton)((props: Properties) => {
                 // fontSize: '1px',
                 background: 'linear-gradient(180deg, #9664FF 0%, #854EF9 100%)',
                 color: 'white',
-                padding: '8px 16px ',
+                minWidth: '112px',
                 '&:hover': {
-                    background: '#9d71fa',
+                    background: 'white',
+                    color: '#854EF9',
+
+                    border: '1px solid #854EF9',
+                    // boxShadow: 'none',
+                },
+                '&:active': {
+                    boxShadow: 'none',
+                    color: 'white',
+                    backgroundColor: '#3c52b2',
+                },
+            }
+        case  'lightPurple2':
+            return {
+                borderRadius: '16px',
+                // fontSize: '1px',
+                background: 'white',
+                minWidth: '112px',
+                color: '#854EF9',
+                border: '1px solid #854EF9',
+                '&:hover': {
+                    background: 'linear-gradient(180deg, #9664FF 0%, #854EF9 100%)',
+                    color: 'white',
                     boxShadow: 'none',
                 },
                 '&:active': {
@@ -52,14 +75,17 @@ const Button = styled(MuiButton)((props: Properties) => {
                 fontSize: '1px !important',
                 background: '#9664FF5A',
                 color: '#9664FF',
-                padding: '8px 16px ',
+                minWidth: '112px',
+                // padding: '8px 16px ',
                 opacity: '100%',
                 '&:hover': {
-                    background: '#9d71fa',
+                    background: 'white',
+                    border: '1px solid #854EF9',
                     boxShadow: 'none',
                 },
                 '&:active': {
                     boxShadow: 'none',
+                    color: 'white',
                     backgroundColor: '#3c52b2',
                 },
             }

@@ -1,10 +1,12 @@
 import React from 'react'
-import {Box, Card, Divider, Link, Typography,} from "@mui/material";
+import {Box, Card, Divider, Typography,} from "@mui/material";
 
 import {Menu} from "../components/Menu";
 import {Cards} from "../components/Card";
 import {Btn} from "../components/Button";
 import {IconBtn} from "../components/IconBtn";
+import {UserMenu} from "../components/UserMenu";
+import {Statistics} from "../components/Statistics";
 
 import helloIcon from '../../src/assets/icons/helloIcon.svg'
 import VectorMajor from '../../src/assets/icons/VectorMajor.svg'
@@ -30,15 +32,12 @@ import notificationDot from "../assets/icons/notificationDot.svg";
 import settingIcon2 from "../assets/icons/settingIcon2.svg";
 import waterIcon from "../assets/icons/waterIcon.svg";
 import vectorDown1 from "../assets/icons/vectorDown1.svg";
-
-
 import lineChart from '../assets/images/Group 106.svg'
 import frame from '../assets/images/Frame 115.svg'
 import Ellipse from '../assets/images/Ellipse 8.svg'
 import LineV from '../assets/images/Line 8.svg'
 import creditCardBkOrange from '../assets/images/creditCardBkOrange.png'
-import {UserMenu} from "../components/UserMenu";
-import {Statistics} from "../components/Statistics";
+import {Chart} from "../components/Chart";
 
 
 export const Wallet = () => {
@@ -49,11 +48,9 @@ export const Wallet = () => {
             display: 'flex',
             flexDirection: 'row',
             border: '16px',
-            // maxWidth: '',
-            // width: '1440px',
-            // maxHeight: 900,
-            // maxHeight: 900,
-            height: 900,
+            maxWidth: '1445px',
+            width: '100%',
+            height: '900px',
             p: '5',
             overflow: 'none',
             borderCollapse: 'collapse',
@@ -71,8 +68,7 @@ export const Wallet = () => {
                 <Menu/>
 
                 <Box sx={{
-                    maxWidth: '560px',
-                    width: '100%',
+                    // width: '580px',
                     mx: 4.4,
                     my: 2.5,
                 }}>
@@ -121,7 +117,7 @@ export const Wallet = () => {
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'row',
-                            gap: '202px',
+                            gap: '195px',
                             mt: '39px',
                         }}>
                             <Typography sx={{
@@ -133,19 +129,17 @@ export const Wallet = () => {
                                 background: '#FFFFFF',
                                 border: 0,
                                 borderRadius: '15px',
-                                p: '4px',
+                                mb: '2px',
                             }}>
 
                                 <Btn
                                     btnBgColor="purple"
-                                >
-                                    Earning</Btn>
+                                >Earning</Btn>
 
                                 <Btn
                                     btnBgColor="transparent"
                                     variant='text'
-                                >
-                                    Spending</Btn>
+                                >Spending</Btn>
                             </Box>
 
                         </Box>
@@ -170,29 +164,7 @@ export const Wallet = () => {
 
                         {/*chart*/}
                         <Box>
-                            <Box sx={{
-                                ml: '233px',
-                                mt: '-29px',
-                                position: 'absolute',
-                            }}>
-                                <img src={frame} alt=""/>
-                            </Box>
-                            <Box sx={{
-                                ml: '274px',
-                                mt: '42px',
-                                position: 'absolute',
-                            }}>
-                                <img src={Ellipse} alt=""/>
-                            </Box>
-
-                            <Box sx={{
-                                ml: '332.5px',
-                                mt: '-25px',
-                                position: 'absolute',
-                            }}>
-                                <img src={LineV} alt=""/>
-                            </Box>
-                            <img src={lineChart} alt=""/>
+                            <Chart/>
                         </Box>
 
                         {/*monthly payments*/}
@@ -210,7 +182,7 @@ export const Wallet = () => {
                                 display: 'flex',
                                 alignContent: 'center',
                                 flexDirection: 'row',
-                                gap: '251px',
+                                gap: '240px',
 
                             }}>
                                 <Typography sx={{
@@ -254,7 +226,6 @@ export const Wallet = () => {
 
             {/*Right Side*/}
             <Box sx={{
-                width: '781px',
                 display: 'flex',
                 flexDirection: 'row',
                 height: '100%',
@@ -316,7 +287,13 @@ export const Wallet = () => {
                                         <Typography color='white'> visa</Typography>
                                         <Typography color='white'> **** **** **** 1890</Typography>
                                     </Cards>
+
+                                    <Box sx={{ml: '334px', mt: '-125px', position: 'absolute',}}>
+                                        <Btn btnBgColor={"roundWhite"}><img width='8px' src={VectorMajor} alt=""/></Btn>
+                                    </Box>
+
                                 </Box>
+
                                 <Box sx={{
                                     mt: '15px',
                                     alignSelf: 'center',
@@ -452,7 +429,9 @@ export const Wallet = () => {
 
 
                 {/*right side part2*/}
-                <Box sx={{ml: '20px'}}>
+                <Box sx={{
+                    ml: '20px', width: '381px',
+                }}>
                     <Box mt='18px'>
                         <UserMenu/>
                     </Box>
@@ -547,8 +526,8 @@ export const Wallet = () => {
                                 />
                             </Box>
 
-                            <Box sx={{my:'16px'}}>
-                                <Divider />
+                            <Box sx={{my: '16px'}}>
+                                <Divider/>
                             </Box>
                             <Box>
                                 <IconBtn
@@ -559,12 +538,21 @@ export const Wallet = () => {
                                     btnText='15m ago'
                                     btnInactive={true}
                                 />
-                                <Btn> Pay now</Btn>
-                                <Btn> Later</Btn>
+                                <Box sx={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    justifyContent: 'center',
+                                    gap: '20px',
+                                    mt: '32px',
+                                }}>
+                                    <Btn btnBgColor={"purple"}> Pay now</Btn>
+                                    <Btn btnBgColor={'lightPurple2'}> Later</Btn>
+                                </Box>
+
                             </Box>
 
-                            <Box sx={{my:'16px'}}>
-                                <Divider />
+                            <Box sx={{my: '16px'}}>
+                                <Divider/>
                             </Box>
 
                             <Box>

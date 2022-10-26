@@ -17,7 +17,7 @@ export const UserMenu = () => {
             border: '0',
             borderRadius: '16px',
             boxShadow: 0,
-            padding: '16px',
+            padding: '8px',
         }}>
             <Box sx={{
                 width: '250px'

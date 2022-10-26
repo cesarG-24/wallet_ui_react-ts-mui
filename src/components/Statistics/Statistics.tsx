@@ -15,15 +15,15 @@ interface Properties extends HtmlHTMLAttributes<HTMLDivElement> {
 
 
 export const Statistics = (props: Properties) => {
-    const {percentage, show,displayPercent,displayNumber='none', valueAny} = props;
+    const {percentage, show, displayPercent, displayNumber = 'none', valueAny} = props;
 
 
-    const backgroundImage = percentage > 0 ?  vectorUpIcon : vectorDownIcon ;
+    const backgroundImage = percentage > 0 ? vectorUpIcon : vectorDownIcon;
 
 
     return (
         <Box sx={{
-            display:`${show}`,
+            display: `${show}`,
             flexDirection: 'row',
             gap: '5.7px'
         }}>

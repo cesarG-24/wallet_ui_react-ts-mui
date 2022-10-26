@@ -32,10 +32,6 @@ import notificationDot from "../assets/icons/notificationDot.svg";
 import settingIcon2 from "../assets/icons/settingIcon2.svg";
 import waterIcon from "../assets/icons/waterIcon.svg";
 import vectorDown1 from "../assets/icons/vectorDown1.svg";
-import lineChart from '../assets/images/Group 106.svg'
-import frame from '../assets/images/Frame 115.svg'
-import Ellipse from '../assets/images/Ellipse 8.svg'
-import LineV from '../assets/images/Line 8.svg'
 import creditCardBkOrange from '../assets/images/creditCardBkOrange.png'
 import {Chart} from "../components/Chart";
 

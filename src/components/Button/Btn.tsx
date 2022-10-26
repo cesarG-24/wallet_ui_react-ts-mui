@@ -3,7 +3,7 @@ import {Box, Button as MuiButton, ButtonProps, Typography} from "@mui/material";
 import {styled} from "@mui/material/styles";
 
 interface Properties extends ButtonProps {
-    readonly btnBgColor?: 'purple' | 'transparent' | 'borders' | 'roundWhite'| 'lightPurple2'| 'lightPurple'| 'black';
+    readonly btnBgColor?: 'purple' | 'transparent' | 'borders' | 'roundWhite' | 'lightPurple2' | 'lightPurple' | 'black';
     readonly disabled?: boolean;
     readonly btnImgIcon?: string | any;
     readonly btnIconDisplay?: string | any;
@@ -129,15 +129,14 @@ const Button = styled(MuiButton)((props: Properties) => {
 });
 
 
-
 export const Btn = (props: Properties) => {
-    const {children,disabled,btnIconDisplay='none',btnImgIcon,...rest} = props;
+    const {children, disabled, btnIconDisplay = 'none', btnImgIcon, ...rest} = props;
 
     return (
-        <Button {...rest} disabled={disabled} >
+        <Button {...rest} disabled={disabled}>
             <Typography variant={"subtitle2"} fontWeight='500'>{children}</Typography>
-            <Box sx={{ml:'8px', display:`${btnIconDisplay}`,}}>
-                <img  src={btnImgIcon}/>
+            <Box sx={{ml: '8px', display: `${btnIconDisplay}`,}}>
+                <img src={btnImgIcon}/>
             </Box>
         </Button>
     )

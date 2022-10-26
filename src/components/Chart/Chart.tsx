@@ -41,8 +41,8 @@ const itemStyle = {
 }
 
 
-const CustomTooltip = ({payload,active}: any) => {
-    if (active &&   payload && payload.length) {
+const CustomTooltip = ({payload, active}: any) => {
+    if (active && payload && payload.length) {
         return (
             <>
                 <Statistics percentage={payload[0].value} displayPercent='none' displayNumber='block'/>
@@ -67,7 +67,7 @@ export const Chart = () => {
                 dataKey="uv"
                 stroke="#9664FF"
                 strokeWidth={4}
-                activeDot={{fill: '#9664FF', stroke:'#fff', strokeWidth: 4, r: 8, className: "boxShadow"  }}
+                activeDot={{fill: '#9664FF', stroke: '#fff', strokeWidth: 4, r: 8, className: "boxShadow"}}
                 dot={false}/>
             <CartesianGrid
                 stroke="#ccc"

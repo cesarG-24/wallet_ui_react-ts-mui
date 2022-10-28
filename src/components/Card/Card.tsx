@@ -1,4 +1,3 @@
-import React from 'react'
 import {Box, Button, Card, CardContent, CardProps, Typography} from "@mui/material";
 
 import redRectForCard from '../../assets/icons/redRectForCard.svg'

@@ -1,4 +1,3 @@
-import React from 'react'
 import {Box, styled, Typography} from "@mui/material";
 
 import {Cards} from "../../components/Card";
@@ -10,25 +9,20 @@ import helloIcon from "../../assets/icons/helloIcon.svg";
 import menu3Dots from "../../assets/icons/menu3Dots.svg";
 import signalIcon from "../../assets/icons/signalIcon.svg";
 import electricityIcon from "../../assets/icons/electricity.svg";
-import {MenuBox} from "../../components/MenuBox";
 import {theme} from "../../Theme";
 
 
 const Root = styled(Box)(({theme}) => ({
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        maxWidth: 370,
+        maxWidth: '370px',
+        width: '100%',
         mx: 2,
         my: 0,
     },
-
-    [theme.breakpoints.up('md')]: {},
-
-    [theme.breakpoints.up('lg')]: {},
-
 }));
 
 
@@ -40,7 +34,7 @@ export default function OverView() {
             <Box sx={{
                 mx: 4.4,
                 my: 2.5,
-                [theme.breakpoints.down('md')]: {
+                [theme.breakpoints.down('sm')]: {
                     mx: 2,
                     my: 0,
                     display: 'flex',
@@ -51,13 +45,13 @@ export default function OverView() {
                     width: '100%'
                 }
             }}>
-                <MenuBox/>
+                {/*<MenuBox/>*/}
                 <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'flex-start',
                     mb: 5,
-                    [theme.breakpoints.down('md')]: {
+                    [theme.breakpoints.down('sm')]: {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -81,7 +75,7 @@ export default function OverView() {
                     display: 'flex',
                     flexDirection: 'row',
                     gap: '15.3px',
-                    [theme.breakpoints.down('md')]: {
+                    [theme.breakpoints.down('sm')]: {
                         display: 'flex',
                         flexDirection: 'column',
                         alignContent: 'center',
@@ -115,7 +109,7 @@ export default function OverView() {
                         flexDirection: 'row',
                         gap: '195px',
                         mt: '39px',
-                        [theme.breakpoints.down('md')]: {
+                        [theme.breakpoints.down('sm')]: {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -138,7 +132,7 @@ export default function OverView() {
                             border: 0,
                             borderRadius: '15px',
                             mb: '2px',
-                            [theme.breakpoints.down('md')]: {
+                            [theme.breakpoints.down('sm')]: {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
@@ -169,7 +163,7 @@ export default function OverView() {
                         mt: '26px',
                         mb: 2,
 
-                        [theme.breakpoints.down('md')]: {
+                        [theme.breakpoints.down('sm')]: {
                             mx: 2.3,
                             mb: 0,
                         }
@@ -187,8 +181,9 @@ export default function OverView() {
 
                     {/*chart*/}
                     <Box sx={{
-                        [theme.breakpoints.down('md')]: {
-                            width: '370px',
+                        [theme.breakpoints.down('sm')]: {
+                            maxWidth: '370px',
+                            width: '100%',
                             mb: '50px',
                         }
                     }}>
@@ -204,7 +199,7 @@ export default function OverView() {
                         px: '23px',
                         py: '18px',
                         mt: '40px',
-                        [theme.breakpoints.down('md')]: {
+                        [theme.breakpoints.down('sm')]: {
                             display: 'flex',
                             flexDirection: 'column',
                             alignItems: 'center',
@@ -220,7 +215,7 @@ export default function OverView() {
                             alignContent: 'center',
                             flexDirection: 'row',
                             gap: '240px',
-                            [theme.breakpoints.down('md')]: {
+                            [theme.breakpoints.down('sm')]: {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
@@ -237,7 +232,7 @@ export default function OverView() {
                         {/*payments*/}
                         <Box sx={{
                             pt: '24px',
-                            [theme.breakpoints.down('md')]: {
+                            [theme.breakpoints.down('sm')]: {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 flexWrap: 'wrap',
@@ -268,9 +263,7 @@ export default function OverView() {
                             />
                         </Box>
                     </Box>
-
                 </Box>
-
             </Box>
         </Root>
 

@@ -1,4 +1,4 @@
-import React, {HtmlHTMLAttributes} from "react";
+import {HtmlHTMLAttributes} from "react";
 import {Box, Typography} from "@mui/material";
 
 import vectorUpIcon from '../../assets/icons/vectorUpIcon.svg';

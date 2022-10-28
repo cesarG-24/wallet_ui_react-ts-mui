@@ -1,4 +1,3 @@
-import React from 'react'
 import {Box, Button, Card} from "@mui/material";
 
 import {IconBtn} from "../IconBtn";

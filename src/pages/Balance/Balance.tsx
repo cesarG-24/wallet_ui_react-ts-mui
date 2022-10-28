@@ -1,10 +1,10 @@
-import React from 'react'
-import {Box, Divider, styled, Typography} from "@mui/material";
+import {Box, Divider, Typography} from "@mui/material";
 
 import {UserMenu} from "../../components/UserMenu";
 import {Statistics} from "../../components/Statistics";
 import {Btn} from "../../components/Button";
 import {IconBtn} from "../../components/IconBtn";
+import {theme} from "../../Theme";
 
 import exportIcon from "../../assets/icons/export.svg";
 import importIcon from "../../assets/icons/import.svg";
@@ -17,38 +17,34 @@ import notificationDot from "../../assets/icons/notificationDot.svg";
 import settingIcon2 from "../../assets/icons/settingIcon2.svg";
 import waterIcon from "../../assets/icons/waterIcon.svg";
 import vectorDown1 from "../../assets/icons/vectorDown1.svg";
-import {MenuBox} from "../../components/MenuBox";
-import {theme} from "../../Theme";
 
 
-const Root = styled(Box)(({theme}) => ({
-    // padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-        // display: 'none',
-    },
 
-    [theme.breakpoints.up('md')]: {},
-
-    [theme.breakpoints.up('lg')]: {},
-
-}));
 export default function Balance() {
 
     return (
-        <Root>
-            <MenuBox/>
+        <Box>
+            {/*<MenuBox/>*/}
 
             <Box sx={{
                 ml: '20px', width: '370px',
-                [theme.breakpoints.down('md')]: {
+
+                [theme.breakpoints.down('sm')]: {
                     display: 'flex',
                     flexDirection: 'column',
-                    width: '370px',
                     alignItems: 'center',
+                    maxWidth: '370px',
+                    width: '100%',
                     ml: 0,
                 },
             }}>
-                <Box mt='18px'>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignContent: 'center',
+                    alignItems: 'center',
+                    mt: '18px',
+                }}>
                     <UserMenu/>
                 </Box>
 
@@ -186,7 +182,7 @@ export default function Balance() {
                 </Box>
 
             </Box>
-        </Root>
+        </Box>
 
     )
 }

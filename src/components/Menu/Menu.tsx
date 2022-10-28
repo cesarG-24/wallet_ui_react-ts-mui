@@ -1,4 +1,3 @@
-import React from 'react'
 import {Box, styled} from "@mui/material";
 
 import profilePic from '../../assets/icons/profilePic.svg'
@@ -45,7 +44,11 @@ export const Menu = () => {
                 gap: 7,
             }}>
                 {/*Menu*/}
-                <img width='40' height='40' src={profilePic} alt='profilePic'/>
+                <Box sx={{
+                    mt: -12
+                }}>
+                    <img width='40' height='40' src={profilePic} alt='profilePic'/>
+                </Box>
 
                 <Box sx={{
                     display: 'flex',

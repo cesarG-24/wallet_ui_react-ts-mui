@@ -1,9 +1,9 @@
-import React from 'react'
 import {Box, Card, styled, Typography} from "@mui/material";
 
 import {Btn} from "../../components/Button";
 import {Cards} from "../../components/Card";
 import {IconBtn} from "../../components/IconBtn";
+import {theme} from "../../Theme";
 
 import VectorMajor from "../../assets/icons/VectorMajor.svg";
 import creditCardBkOrange from "../../assets/images/creditCardBkOrange.png";
@@ -14,39 +14,32 @@ import tokopaedi from "../../assets/icons/tokopaedi.svg";
 import blibli from "../../assets/icons/blibliIcon.svg";
 import amazon1 from "../../assets/icons/amazon-icon 1.svg";
 import amazon2 from "../../assets/icons/amazon-icon2.svg";
-import {theme} from "../../Theme";
-import {MenuBox} from "../../components/MenuBox";
 
 const Root = styled(Box)(({theme}) => ({
     [theme.breakpoints.down('sm')]: {
-    },
-    [theme.breakpoints.down('md')]: {
-    },
-
-    [theme.breakpoints.up('md')]: {
         display: 'flex',
         flexDirection: 'column',
         my: '35px',
         mx: '33px',
     },
-
-    [theme.breakpoints.up('lg')]: {},
-
 }));
+
+
 export default function YourCard() {
 
     return (
 
         <Root>
-            <MenuBox/>
+            {/*<MenuBox/>*/}
 
             <Box sx={{
                 my: '35px',
                 mx: '33px',
 
-                [theme.breakpoints.down('md')]: {
+                [theme.breakpoints.down('sm')]: {
                     my: '30px',
                     maxWidth: '370px',
+                    width: '100%',
                 },
             }}>
 
@@ -69,7 +62,7 @@ export default function YourCard() {
                 {/*leftSide button*/}
                 <Box sx={{
                     ml: '-53px',
-                    [theme.breakpoints.down('md')]: {
+                    [theme.breakpoints.down('sm')]: {
                         display: 'none',
                     },
                 }}>
@@ -111,7 +104,7 @@ export default function YourCard() {
 
                         <Box sx={{
                             ml: '334px', mt: '-125px', position: 'absolute',
-                            [theme.breakpoints.down('md')]: {
+                            [theme.breakpoints.down('sm')]: {
                                 display: 'none',
                             },
                         }}>

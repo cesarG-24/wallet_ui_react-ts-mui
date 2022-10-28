@@ -8,9 +8,6 @@ const OverView = lazy(() => import('./pages/OverView'))
 const YourCard = lazy(() => import('./pages/YourCard'))
 const Balance = lazy(() => import('./pages/Balance'))
 
-// switch ({
-//
-// })
 function App() {
 
 

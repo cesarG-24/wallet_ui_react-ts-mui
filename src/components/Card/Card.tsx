@@ -6,6 +6,7 @@ import purpleRectForCard from '../../assets/icons/purpleRectForCard.svg'
 import backgroundBlur from '../../assets/images/backgroundBlur.png'
 
 import {Statistics} from '../Statistics'
+import {theme} from "../../Theme";
 
 interface Properties extends CardProps {
     readonly bgImage?: '' | 'purple' | 'red' | 'blurPurple'
@@ -82,6 +83,7 @@ export const Cards = (properties: Properties) => {
             color = '#000000';
             break;
         case 'grey':
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
             color = '#1E2029';
             break;
 
@@ -101,14 +103,17 @@ export const Cards = (properties: Properties) => {
             filter: 'drop-shadow(0px 12px 50px rgba(0, 0, 0, 0.04))',
             width: `${width}px`,
             height: `${height}px`,
+            [theme.breakpoints.down('md')]: {
+                width: '347.22px',
+            }
         }} {...rest}>
 
             <CardContent sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 width: '93%',
-                gap: '40.31px',
                 justifyContent: 'space-between',
+
             }}>
                 <Box sx={{
                     display: 'flex',
@@ -142,7 +147,10 @@ export const Cards = (properties: Properties) => {
                 <Box>
                     <Button sx={{
                         mb: '62.24px',
-                    }} disabled={btnInactive}><img src={btnImg} alt=""/></Button>
+                    }} disabled={btnInactive}>
+                        <img src={btnImg} alt=""/>
+                    </Button>
+
                     <Typography sx={{
                         color: `${fntColorB}`,
                         fontWeight: 400,

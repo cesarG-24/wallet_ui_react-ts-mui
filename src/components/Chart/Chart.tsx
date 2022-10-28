@@ -1,5 +1,5 @@
 import React from 'react'
-import {CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis} from 'recharts';
+import {CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import {Statistics} from "../Statistics";
 
 const data = [
@@ -56,52 +56,59 @@ const CustomTooltip = ({payload, active}: any) => {
 export const Chart = () => {
 
     return (
-        <LineChart
-            width={492}
-            height={259}
-            data={data}
-            margin={{top: 20, right: 8, bottom: 5, left: -20}}>
+        <ResponsiveContainer minWidth={350} minHeight={200} width={'100%'} height={280}>
+            <LineChart
+                width={492}
+                height={280}
+                data={data}
+                margin={{top: 20, right: 8, bottom: 5, left: -20}}
 
-            <Line
-                type="monotone"
-                dataKey="uv"
-                stroke="#9664FF"
-                strokeWidth={4}
-                activeDot={{fill: '#9664FF', stroke: '#fff', strokeWidth: 4, r: 8, className: "boxShadow"}}
-                dot={false}/>
-            <CartesianGrid
-                stroke="#ccc"
-                display='none'
-                strokeDasharray="10 9"/>
-            <XAxis
-                dataKey="name"
-                fontSize='12'
-                axisLine={false}
-                padding={{left: 30, right: 30}}
-                tickLine={false}
-            />
-            <YAxis
-                allowDataOverflow={true}
-                allowDecimals={true}
-                interval='preserveEnd'
-                type='number'
-                unit="$"
-                fontSize='12'
-                axisLine={false}
-                tickLine={false}
-            />
-            <Tooltip
-                content={<CustomTooltip/>}
-                itemStyle={itemStyle}
-                contentStyle={contentStyle}
-                wrapperStyle={wrapperStyle}
-                labelStyle={{display: 'none'}}
-                cursor={{stroke: '#1E2029', strokeWidth: 1, strokeDasharray: '5 5', opacity: '40%',}}
-                allowEscapeViewBox={{x: false, y: false}}
-                position={{y: -10}}
+            >
+                <Line
+                    type="monotone"
+                    dataKey="uv"
+                    stroke="#9664FF"
+                    strokeWidth={4}
+                    activeDot={{fill: '#9664FF', stroke: '#fff', strokeWidth: 4, r: 8, className: "boxShadow"}}
+                    dot={false}
+                    overflow={'visible'}/>
 
-            />
+                <CartesianGrid
+                    stroke="#ccc"
+                    display='none'
+                    strokeDasharray="10 9"/>
+                <XAxis
+                    dataKey="name"
+                    fontSize='12'
+                    axisLine={false}
+                    padding={{left: 10, right: 10}}
+                    width={10}
+                    tickLine={false}
+                />
+                <YAxis
+                    allowDataOverflow={true}
+                    allowDecimals={true}
+                    interval='preserveEnd'
+                    type='number'
+                    unit="$"
+                    fontSize='12'
+                    axisLine={false}
+                    tickLine={false}
+                />
+                <Tooltip
+                    content={<CustomTooltip/>}
+                    itemStyle={itemStyle}
+                    contentStyle={contentStyle}
+                    wrapperStyle={wrapperStyle}
+                    labelStyle={{display: 'none'}}
+                    cursor={{stroke: '#1E2029', strokeWidth: 1, strokeDasharray: '5 5', opacity: '40%',}}
+                    allowEscapeViewBox={{x: false, y: false}}
+                    position={{y: -10}}
 
-        </LineChart>
+                />
+
+            </LineChart>
+
+        </ResponsiveContainer>
     )
 };

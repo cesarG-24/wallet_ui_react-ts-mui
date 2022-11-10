@@ -13,9 +13,10 @@ const Root = styled(Box)(({theme}) => ({
     [theme.breakpoints.down('sm')]: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+        alignContent: 'center',
         maxWidth: '370px',
         width: '100%',
-        alignItems: 'center',
     },
 }));
 
